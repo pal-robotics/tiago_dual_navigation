@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package>
+  <name>tiago_dual_maps</name>
+  <version>1.0.7</version>
+  <description>TiaGo Dual-specific maps and launch files.</description>
+  <maintainer email="procopio.stein@pal-robotics.com">Procopio Stein</maintainer>
+  <license>Modified BSD</license>
+  <author email="victor.lopez@pal-robotics.com">Victor Lopez</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>
