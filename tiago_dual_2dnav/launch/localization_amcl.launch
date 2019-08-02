@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<launch>
-  <include file="$(find tiago_2dnav)/launch/localization_amcl.launch" pass_all_args="true"/>
-</launch>
