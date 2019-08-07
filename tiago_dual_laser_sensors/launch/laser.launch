@@ -1,3 +1,3 @@
 <launch>
-  <include file="$(find tiago_dual_laser_sensors)/launch/base_laser.launch" pass_all_args="true"/>
+  <include file="$(find tiago_laser_sensors)/launch/base_laser.launch" pass_all_args="true"/>
 </launch>

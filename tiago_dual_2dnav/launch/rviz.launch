@@ -1,3 +1,0 @@
-<launch>
-  <include file="$(find tiago_2dnav)/launch/rviz.launch" pass_all_args="true"/>
-</launch>
