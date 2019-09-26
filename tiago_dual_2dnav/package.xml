@@ -14,4 +14,5 @@
   <run_depend>tiago_2dnav</run_depend>
   <run_depend>tiago_dual_laser_sensors</run_depend>
   <run_depend>pal_navigation_cfg_tiago_dual</run_depend>
+  <run_depend>tiago_dual_maps</run_depend>
 </package>
