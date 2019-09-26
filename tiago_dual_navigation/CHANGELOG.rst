@@ -2,6 +2,11 @@
 Changelog for package tiago_dual_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Readd tiago_dual_maps
+* Contributors: Victor Lopez
+
 1.0.10 (2019-09-26)
 -------------------
 

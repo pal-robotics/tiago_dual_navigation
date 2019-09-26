@@ -2,6 +2,11 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Readd tiago_dual_maps
+* Contributors: Victor Lopez
+
 1.0.10 (2019-09-26)
 -------------------
 * Add missing dependency
