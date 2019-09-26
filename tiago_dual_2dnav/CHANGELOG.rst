@@ -2,6 +2,11 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add missing dependency
+* Contributors: Victor Lopez
+
 1.0.9 (2019-08-07)
 ------------------
 * Merge branch 'fix_navigation' into 'erbium-devel'
