@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <launch>
 
-  <arg name="config_base_path" default="$(find pal_navigation_cfg_tiago)"/>
+  <arg name="config_base_path" default="$(find pal_navigation_cfg_tiago_dual)"/>
   <arg name="global_planner" default="global_planner"/>
   <arg name="local_planner"  default="teb"/>
   <arg name="public_sim"     default="false"/>
