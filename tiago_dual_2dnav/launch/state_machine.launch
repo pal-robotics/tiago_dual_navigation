@@ -6,10 +6,12 @@
   <arg name="base_frame" default="/base_footprint"/>
   <arg name="map_frame"  default="/map"/>
 
-  <include file="$(find tiago_2dnav)/launch/state_machine.launch">
+  <include file="$(find pal_navigation_cfg_tiago_dual)/launch/state_machine.launch">
     <arg name="state"  value="$(arg state)"/>
     <arg name="public_sim" value="$(arg public_sim)"/>
     <arg name="base_frame" value="$(arg base_frame)"/>
     <arg name="map_frame"  value="$(arg map_frame)"/>
   </include>
+
 </launch>
+
