@@ -2,6 +2,17 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'remove-tiago-dependency' into 'erbium-devel'
+  Remove tiago dependency
+  See merge request robots/tiago_dual_navigation!2
+* replacing dependency on laser_sensors
+* remove unused dependencies and minor fixes
+* parsing subtype parameter
+* updated launch and package files to bypass tiago dependency
+* Contributors: Federico Nardi, Procópio Stein
+
 1.0.11 (2019-09-26)
 -------------------
 * Readd tiago_dual_maps
