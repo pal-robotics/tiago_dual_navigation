@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.12 (2020-01-28)
+-------------------
 * Merge branch 'remove-tiago-dependency' into 'erbium-devel'
   Remove tiago dependency
   See merge request robots/tiago_dual_navigation!2
