@@ -5,7 +5,12 @@ find_package(catkin REQUIRED)
 
 catkin_package()
 
-foreach(dir launch)
+install(
+    PROGRAMS
+        scripts/navigation_camera_mgr.py
+    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
+
+foreach(dir launch config)
     install(DIRECTORY ${dir}/
         DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
 endforeach(dir)
