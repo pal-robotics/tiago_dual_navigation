@@ -7,12 +7,6 @@ catkin_package()
 
 install(
     PROGRAMS
-        scripts/record_mapping.sh
-        scripts/record_move_base.sh
-        scripts/record_2dnav.sh
-        scripts/record_odom.sh
-        scripts/record_patrol.sh
-        scripts/record_rgbd.sh
         scripts/navigation_camera_mgr.py
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 
