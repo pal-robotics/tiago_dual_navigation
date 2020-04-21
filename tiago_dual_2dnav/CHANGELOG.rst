@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.13 (2020-04-21)
+-------------------
 * Merge branch 'scripts_tiago_2dnav' into 'erbium-devel'
   Copied scripts and config folder from tiago_2dnav
   See merge request robots/tiago_dual_navigation!4

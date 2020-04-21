@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>tiago_dual_navigation</name>
-  <version>1.0.12</version>
+  <version>1.0.13</version>
   <description>TiaGo dual navigation metapackage</description>
   <maintainer email="procopio.stein@pal-robotics.com">Procopio Stein</maintainer>
   <license>BSD</license>
