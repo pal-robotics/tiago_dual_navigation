@@ -2,6 +2,15 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'scripts_tiago_2dnav' into 'erbium-devel'
+  Copied scripts and config folder from tiago_2dnav
+  See merge request robots/tiago_dual_navigation!4
+* remove other scripts except the navigation_camera_mgr
+* Copied scripts and config folder from tiago_2dnav
+* Contributors: Sai Kishor Kothakota, procopiostein
+
 1.0.12 (2020-01-28)
 -------------------
 * Merge branch 'remove-tiago-dependency' into 'erbium-devel'
