@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.14 (2020-05-14)
+-------------------
 * Merge branch 'nav-valid' into 'erbium-devel'
   updated rviz config
   See merge request robots/tiago_dual_navigation!5
