@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.0.15 (2020-05-14)
+-------------------
 * updated rviz configs
 * Contributors: Procópio Stein, procopiostein
 
