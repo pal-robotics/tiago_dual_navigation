@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'rename_tf_prefix' into 'erbium-devel'
+  Rename tf_prefix param
+  See merge request robots/tiago_dual_navigation!8
+* Rename tf_prefix param
+* Contributors: davidfernandez, victor
+
 1.0.15 (2020-05-14)
 -------------------
 * updated rviz configs
