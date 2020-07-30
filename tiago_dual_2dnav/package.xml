@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>tiago_dual_2dnav</name>
-  <version>1.0.15</version>
+  <version>1.0.16</version>
   <description>TiaGo Dual-specific launch files needed to run
     navigation on the TiaGo robot.</description>
   <maintainer email="procopio.stein@pal-robotics.com">Procopio Stein</maintainer>
