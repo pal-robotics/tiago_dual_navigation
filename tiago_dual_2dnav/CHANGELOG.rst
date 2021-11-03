@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'omni_base_robot' into 'erbium-devel'
+  tiago dual navigating with omni base
+  See merge request robots/tiago_dual_navigation!9
+* tiago dual navigating with omni base
+* Contributors: antoniobrandi, saikishor
+
 1.0.16 (2020-07-30)
 -------------------
 * Merge branch 'rename_tf_prefix' into 'erbium-devel'
