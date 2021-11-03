@@ -9,6 +9,7 @@
   <arg name="robot_namespace" default=""/>
   <arg name="multiple"        default="false"/>
   <arg name="subtype"         default="custom"/>
+  <arg name="base_type"     default="pmb2"/>
 
   <!-- Navigation -->
   <include file="$(find pal_navigation_cfg_tiago_dual)/launch/move_base.launch">
@@ -20,7 +21,7 @@
     <arg name="robot_namespace"  value="$(arg robot_namespace)"/>
     <arg name="multiple"         value="$(arg multiple)"/>
     <arg name="subtype"          value="$(arg subtype)"/>
+    <arg name="base_type"       value="$(arg base_type)"/>
   </include>
 
 </launch>
-
