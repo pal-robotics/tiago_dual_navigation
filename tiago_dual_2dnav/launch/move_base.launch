@@ -3,7 +3,7 @@
 
   <arg name="config_base_path" default="$(find pal_navigation_cfg_tiago_dual)"/>
   <arg name="global_planner"  default="global_planner"/>
-  <arg name="local_planner"   default="teb"/>
+  <arg name="local_planner"   default="pal"/>
   <arg name="public_sim"      default="false"/>
   <arg name="rgbd_sensors"    default="false"/> 
   <arg name="robot_namespace" default=""/>
