@@ -2,6 +2,11 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* replaced teb by pal local planner
+* Contributors: josegarcia
+
 1.1.0 (2021-11-03)
 ------------------
 * Merge branch 'omni_base_robot' into 'erbium-devel'
