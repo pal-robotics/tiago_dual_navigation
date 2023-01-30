@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/map-manager' into 'erbium-devel'
+  move to map manager
+  See merge request robots/tiago_dual_navigation!10
+* move to map manager
+* Contributors: antoniobrandi
+
 1.1.1 (2022-06-20)
 ------------------
 * replaced teb by pal local planner
