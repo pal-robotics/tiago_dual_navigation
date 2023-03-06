@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_maps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'add_pal_office_7th_floor_map' into 'erbium-devel'
+  Add new pal office map
+  See merge request robots/tiago_dual_navigation!12
+* Add new pal office map
+* Contributors: antoniobrandi, thomaspeyrucain
+
 1.1.2 (2023-01-30)
 ------------------
 
