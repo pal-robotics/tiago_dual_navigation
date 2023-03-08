@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.5 (2023-03-08)
+------------------
 * Merge branch 'fix-build' into 'erbium-devel'
   Fix Build
   See merge request robots/tiago_dual_navigation!16
