@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.1.4 (2023-03-08)
+------------------
 * Update package.xml
 * Merge branch 'fix/stvl-obstacle-rgbd-layer' into 'erbium-devel'
   fix
