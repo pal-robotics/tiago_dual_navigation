@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix-build' into 'erbium-devel'
+  Fix Build
+  See merge request robots/tiago_dual_navigation!16
+* Update CMakeLists.txt
+* Contributors: antoniobrandi
+
 1.1.4 (2023-03-08)
 ------------------
 * Update package.xml

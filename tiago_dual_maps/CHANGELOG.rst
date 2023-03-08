@@ -2,6 +2,9 @@
 Changelog for package tiago_dual_maps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.3 (2023-03-06)
 ------------------
 * Merge branch 'add_pal_office_7th_floor_map' into 'erbium-devel'
