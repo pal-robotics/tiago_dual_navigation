@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/orbbec' into 'erbium-devel'
+  fixed orbbec astra name
+  See merge request robots/tiago_dual_navigation!17
+* fixed orbbec astra name
+* Contributors: antoniobrandi
+
 1.1.5 (2023-03-08)
 ------------------
 * Merge branch 'fix-build' into 'erbium-devel'
