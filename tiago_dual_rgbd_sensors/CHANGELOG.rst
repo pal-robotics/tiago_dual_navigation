@@ -2,6 +2,9 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.6 (2023-03-15)
 ------------------
 * Merge branch 'fix/orbbec' into 'erbium-devel'

@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_laser_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/ydlidar-startup' into 'erbium-devel'
+  added laser doctor for ydlidar
+  See merge request robots/tiago_dual_navigation!18
+* added laser doctor for ydlidar
+* Contributors: AntoBrandi, antoniobrandi
+
 1.1.6 (2023-03-15)
 ------------------
 
