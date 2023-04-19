@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_maps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/add-buildings' into 'erbium-devel'
+  added buildings to tiago_dual
+  See merge request robots/tiago_dual_navigation!19
+* added buildings to tiago_dual
+* Contributors: antoniobrandi
+
 1.1.7 (2023-03-23)
 ------------------
 
