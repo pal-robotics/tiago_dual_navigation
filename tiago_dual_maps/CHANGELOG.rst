@@ -2,6 +2,9 @@
 Changelog for package tiago_dual_maps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 1.1.8 (2023-04-19)
 ------------------
 * Merge branch 'feat/add-buildings' into 'erbium-devel'
