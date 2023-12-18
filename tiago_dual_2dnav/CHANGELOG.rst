@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+1.2.0 (2023-12-18)
+------------------
 * Merge branch 'feat/move-base-flex' into 'erbium-devel'
   using move base flex
   See merge request robots/tiago_dual_navigation!11
