@@ -12,6 +12,9 @@
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
+  <exec_depend>tiago_dual_2dnav</exec_depend>
+  <exec_depend>tiago_dual_laser_sensors</exec_depend>
+
   <export>
     <build_type>ament_cmake</build_type>
   </export>
