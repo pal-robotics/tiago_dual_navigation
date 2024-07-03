@@ -1,16 +1,12 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.5)
 project(tiago_dual_2dnav)
 
-find_package(catkin REQUIRED)
+find_package(ament_cmake_auto REQUIRED)
+ament_auto_find_build_dependencies()
 
-catkin_package()
+if(BUILD_TESTING)
+  find_package(ament_lint_auto REQUIRED)
+  ament_lint_auto_find_test_dependencies()
+endif()
 
-install(
-    PROGRAMS
-        scripts/navigation_camera_mgr.py
-    DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
-
-foreach(dir launch config)
-    install(DIRECTORY ${dir}/
-        DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}/${dir})
-endforeach(dir)
+ament_auto_package()

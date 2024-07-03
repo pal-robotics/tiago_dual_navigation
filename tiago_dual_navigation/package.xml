@@ -1,20 +1,18 @@
 <?xml version="1.0"?>
-<package>
+<package format="3">
   <name>tiago_dual_navigation</name>
-  <version>1.2.0</version>
-  <description>TiaGo dual navigation metapackage</description>
-  <maintainer email="procopio.stein@pal-robotics.com">Procopio Stein</maintainer>
-  <license>BSD</license>
-  <author email="victor.lopez@pal-robotics.com">Victor Lopez</author>
+  <version>4.1.0</version>
+  <description>TIAGo navigation metapackage</description>
+  <maintainer email="jordan.palacios@pal-robotics.com">Jordan Palacios</maintainer>
+  <maintainer email="noel.jimenez@pal-robotics.com">Noel Jimenez</maintainer>
+  <license>Apache License 2.0</license>
+  <author email="jose.garcia@pal-robotics.com">Jose Carlos Garcia</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <url type="website">https://github.com/pal-robotics/tiago_dual_navigation</url>
 
-  <run_depend>tiago_dual_2dnav</run_depend>
-  <run_depend>tiago_dual_maps</run_depend>
-  <run_depend>tiago_dual_laser_sensors</run_depend>
-  <run_depend>tiago_dual_rgbd_sensors</run_depend>
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
   <export>
-    <metapackage/>
+    <build_type>ament_cmake</build_type>
   </export>
 </package>

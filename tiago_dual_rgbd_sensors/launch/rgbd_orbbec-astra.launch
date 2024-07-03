@@ -1,3 +1,0 @@
-<launch>
-  <include file="$(find tiago_rgbd_sensors)/launch/rgbd_orbbec-astra.launch" pass_all_args="true"/>
-</launch>

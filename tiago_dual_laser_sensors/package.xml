@@ -1,18 +1,20 @@
 <?xml version="1.0"?>
-<package>
+<package format="3">
   <name>tiago_dual_laser_sensors</name>
-  <version>1.2.0</version>
-  <description>TiaGo Dual-specific laser sensors launch and config files.</description>
-  <maintainer email="procopio.stein@pal-robotics.com">Procopio Stein</maintainer>
-  <license>Modified BSD</license>
-  <author email="victor.lopez@pal-robotics.com">Victor Lopez</author>
+  <version>4.1.0</version>
+  <description>Launch files and scripts needed to bring up the ROS nodes of a TIAGo robot.</description>
+  <maintainer email="jordan.palacios@pal-robotics.com">Jordan Palacios</maintainer>
+  <license>Apache License 2.0</license>
+  <author email="jose.garcia@pal-robotics.com">Jose Carlos Garcia</author>
 
-  <buildtool_depend>catkin</buildtool_depend>
+  <url type="website">https://github.com/pal-robotics/tiago_dual_navigation</url>
 
-  <run_depend>tiago_laser_sensors</run_depend>
-  <run_depend>hokuyo_node</run_depend>
-  <run_depend>sick_tim</run_depend>
-  <run_depend>laser_filters</run_depend>
-  <run_depend>pal_filters</run_depend>
-  <run_depend>pointcloud_to_laserscan</run_depend>
+  <buildtool_depend>ament_cmake_auto</buildtool_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
 </package>
