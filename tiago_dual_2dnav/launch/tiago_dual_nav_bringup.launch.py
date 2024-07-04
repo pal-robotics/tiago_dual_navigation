@@ -34,9 +34,6 @@ def navigation_bringup(context, *args, **kwargs):
     world_name = LaunchConfiguration("world_name").perform(context)
     base_type = LaunchConfiguration("base_type").perform(context)
 
-    if base_type != "omni_base":
-        base_type = "diff_base"
-
     tiago_dual_2dnav = get_package_share_directory("tiago_dual_2dnav")
     pal_maps = get_package_share_directory("pal_maps")
     nav2_bringup = get_package_share_directory("nav2_bringup")
@@ -212,7 +209,7 @@ def generate_launch_description():
 
     declare_base_type_arg = DeclareLaunchArgument(
         "base_type",
-        default_value="diff_base",
+        default_value="pmb2",
         description="Type of base for the robot",
     )
 
