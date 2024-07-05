@@ -1,0 +1,21 @@
+#* Remappings that will be applied to all the Navigation,
+#* SLAM and Localization parameters for TIAGo OMNI Base Robot
+
+use_sim_time : False
+global_frame : "map"
+base_link_frame : "base_link"
+base_footprint_frame : "base_footprint"
+odom_frame : "odom"
+odom_topic : "/mobile_base_controller/odom"
+# As today use_sim_time can only be set from the launch file 
+# https://github.com/ros-planning/navigation2/blob/main/nav2_bringup/launch/navigation_launch.py#L111
+robot_radius : 0.0 # Disabled
+footprint : "'[[ 0.35, 0.24], [-0.35, 0.24], [-0.35, -0.24], [ 0.35, -0.24]]'" # TODO(JGM): footprint is invalid
+
+laser_frame : "virtual_base_laser_link"
+laser_min_angle: -2.35619 # !degrees -135 (not supported)
+laser_max_angle: 2.35619 # !degrees 135 (not supported)
+scan_topic : "/scan" 
+scan_raw_topic: "/scan_raw"
+scan_raw_topic_0: "/scan_rear_raw"
+scan_raw_topic_1: "/scan_front_raw"
