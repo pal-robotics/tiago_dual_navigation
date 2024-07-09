@@ -10,6 +10,8 @@ if(pal_module_cmake_FOUND)
                       module/30_navigation.yaml
                       module/30_navigation_w_composition.yaml
                       module/30_slam.yaml)
+elseif(DEFINED ENV{PAL_DISTRO})
+  message(FATAL_ERROR "The pal_module_cmake package was not found. Modules not registered.")
 endif()
 
 if(BUILD_TESTING)
