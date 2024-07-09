@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add warning for pal_module_cmake not found
+* fix: replace diff_base by pmb2 as base_type
+* feat: ros2 support for laser navigation
+* Initial ROS2 commit
+* Contributors: Noel Jimenez, josegarcia
+
 1.2.0 (2023-12-18)
 ------------------
 * Merge branch 'feat/move-base-flex' into 'erbium-devel'

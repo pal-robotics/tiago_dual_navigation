@@ -2,6 +2,12 @@
 Changelog for package tiago_dual_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* feat: ros2 support for laser navigation
+* Initial ROS2 commit
+* Contributors: josegarcia
+
 1.2.0 (2023-12-18)
 ------------------
 
