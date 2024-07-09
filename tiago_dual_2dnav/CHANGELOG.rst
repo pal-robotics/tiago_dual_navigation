@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.1.1 (2024-07-09)
+------------------
 * Add warning for pal_module_cmake not found
 * fix: replace diff_base by pmb2 as base_type
 * feat: ros2 support for laser navigation
