@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_laser_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'feat/aca/using-pipelines' into 'humble-devel'
+  using variables for pipelines
+  See merge request robots/tiago_dual_navigation!24
+* using variables for pipelines
+* Contributors: andreacapodacqua
+
 4.1.1 (2024-07-09)
 ------------------
 * Add warning for pal_module_cmake not found
