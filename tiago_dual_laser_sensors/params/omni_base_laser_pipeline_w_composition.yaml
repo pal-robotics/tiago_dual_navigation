@@ -16,16 +16,16 @@ containers:
       app: sick_driver
       params: [sick_571]
       variables:
-        device_number: 0
-        frame_id: "base_rear_laser_link"
-        scan_topic: "/scan_rear_raw"
+        device_number: ${device_number_laser_0}
+        scan_raw_topic: ${scan_raw_topic_0}
+        laser_frame: ${laser_frame_0}
     sick_571_front:
       app: sick_driver
       params: [sick_571]
       variables:
-        device_number: 1
-        frame_id: "base_front_laser_link"
-        scan_topic: "/scan_front_raw"
+        device_number: ${device_number_laser_1}
+        scan_raw_topic: ${scan_raw_topic_1}
+        laser_frame: ${laser_frame_1}
     laserscan_multi_merger: 
       app: laserscan_multi_merger  
       params: [default] 
