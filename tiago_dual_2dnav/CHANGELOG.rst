@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.1.2 (2024-07-15)
+------------------
 * Merge branch 'feat/aca/using-pipelines' into 'humble-devel'
   using variables for pipelines
   See merge request robots/tiago_dual_navigation!24
