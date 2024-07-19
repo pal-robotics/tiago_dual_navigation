@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/aca/laser-frames' into 'humble-devel'
+  fix laser frames
+  See merge request robots/tiago_dual_navigation!25
+* fix laser frames
+* Contributors: andreacapodacqua
+
 4.1.2 (2024-07-15)
 ------------------
 * Merge branch 'feat/aca/using-pipelines' into 'humble-devel'

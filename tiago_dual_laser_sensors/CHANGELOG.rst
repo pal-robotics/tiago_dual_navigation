@@ -2,6 +2,9 @@
 Changelog for package tiago_dual_laser_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.1.2 (2024-07-15)
 ------------------
 * Merge branch 'feat/aca/using-pipelines' into 'humble-devel'
