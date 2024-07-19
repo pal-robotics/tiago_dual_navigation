@@ -21,10 +21,10 @@ laser_frame : "virtual_base_laser_link"
 
 #laser_0 remappings:
 scan_raw_topic_0: "/scan_rear_raw"
-laser_frame_0: "base_front_laser_link"
+laser_frame_0: "base_rear_laser_link"
 device_number_laser_0: 0
 
 #laser_1 remappings:
 scan_raw_topic_1: "/scan_front_raw"
-laser_frame_1: "base_rear_laser_link"
+laser_frame_1: "base_front_laser_link"
 device_number_laser_1: 1
