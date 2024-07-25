@@ -128,7 +128,7 @@ def private_nav_function(context, *args, **kwargs):
         launch_arguments={
             "params_pkg": "tiago_dual_laser_sensors",
             "params_file": base_type + "_laser_pipeline_sim.yaml",
-            "robot_name": "tiago",
+            "robot_name": "tiago_dual",
             "remappings_file": remappings_file,
         }
     )
@@ -139,7 +139,7 @@ def private_nav_function(context, *args, **kwargs):
         launch_arguments={
             "params_pkg": "tiago_dual_2dnav",
             "params_file": "tiago_dual_" + base_type + "_nav.yaml",
-            "robot_name": "tiago",
+            "robot_name": "tiago_dual",
             "remappings_file": remappings_file,
         })
 
@@ -149,7 +149,7 @@ def private_nav_function(context, *args, **kwargs):
         launch_arguments={
             "params_pkg": "tiago_dual_2dnav",
             "params_file": "tiago_dual_slam.yaml",
-            "robot_name": "tiago",
+            "robot_name": "tiago_dual",
             "remappings_file": remappings_file,
         },
         condition=IfCondition(LaunchConfiguration("slam"))
@@ -161,7 +161,7 @@ def private_nav_function(context, *args, **kwargs):
         launch_arguments={
             "params_pkg": "tiago_dual_2dnav",
             "params_file": "tiago_dual_" + base_type + "_loc.yaml",
-            "robot_name": "tiago",
+            "robot_name": "tiago_dual",
             "remappings_file": remappings_file,
         },
         condition=UnlessCondition(LaunchConfiguration("slam"))
