@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.2.0 (2024-07-30)
+------------------
 * Merge branch 'air/feat/unify_pkgs' into 'humble-devel'
   Restructure launch file
   See merge request robots/tiago_dual_navigation!26
