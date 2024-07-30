@@ -71,7 +71,7 @@ def public_nav_function(context, *args, **kwargs):
 
     nav2_bringup_launch = include_scoped_launch_py_description(
         pkg_name="nav2_bringup",
-        paths=['launch', "navigation_launch.py"],
+        paths=["launch", "navigation_launch.py"],
         launch_arguments={
             "params_file": public_param_file,
             "use_sim_time": "True"
@@ -135,7 +135,7 @@ def private_nav_function(context, *args, **kwargs):
 
     nav_bringup_launch = include_scoped_launch_py_description(
         pkg_name="pal_nav2_bringup",
-        paths=['launch', "nav_bringup.launch.py"],
+        paths=["launch", "nav_bringup.launch.py"],
         launch_arguments={
             "params_pkg": "tiago_dual_2dnav",
             "params_file": "tiago_dual_" + base_type + "_nav.yaml",
