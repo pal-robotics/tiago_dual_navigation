@@ -18,209 +18,188 @@ from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.actions import (
-    IncludeLaunchDescription,
     DeclareLaunchArgument,
     OpaqueFunction,
 )
+from dataclasses import dataclass
+
 from launch.conditions import IfCondition, UnlessCondition
 from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
-from launch.launch_description_sources import PythonLaunchDescriptionSource
+from launch_pal.arg_utils import read_launch_argument
+from launch_pal.include_utils import include_scoped_launch_py_description
+
+from launch_pal.robot_arguments import CommonArgs
+from launch_pal.arg_utils import LaunchArgumentsBase
+from tiago_description.launch_arguments import TiagoArgs
 
 
-def navigation_bringup(context, *args, **kwargs):
+@dataclass(frozen=True)
+class LaunchArguments(LaunchArgumentsBase):
+
+    is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
+    world_name: DeclareLaunchArgument = CommonArgs.world_name
+    base_type: DeclareLaunchArgument = TiagoArgs.base_type
+    slam: DeclareLaunchArgument = CommonArgs.slam
+
+
+def generate_launch_description():
+
+    # Create the launch description and populate
+    ld = LaunchDescription()
+    launch_arguments = LaunchArguments()
+
+    launch_arguments.add_to_launch_description(ld)
+
+    declare_actions(ld, launch_arguments)
+
+    return ld
+
+
+def public_nav_function(context, *args, **kwargs):
     actions = []
-    is_public_sim = LaunchConfiguration("is_public_sim").perform(context)
-    world_name = LaunchConfiguration("world_name").perform(context)
-    base_type = LaunchConfiguration("base_type").perform(context)
-
     tiago_dual_2dnav = get_package_share_directory("tiago_dual_2dnav")
+    base_type = read_launch_argument("base_type", context)
+    world_name = read_launch_argument("world_name", context)
+
     pal_maps = get_package_share_directory("pal_maps")
-    nav2_bringup = get_package_share_directory("nav2_bringup")
+    rviz_config_file = os.path.join(tiago_dual_2dnav, "config", "rviz", "navigation.rviz")
+    map_path = os.path.join(pal_maps, "maps", world_name, "map.yaml")
 
-    if is_public_sim == "True" or is_public_sim == "true":
-        public_param_file = os.path.join(
-            tiago_dual_2dnav, "params", "tiago_dual_"+base_type+"_nav_public_sim.yaml")
+    public_param_file = os.path.join(
+        tiago_dual_2dnav, "params", "tiago_dual_"+base_type+"_nav_public_sim.yaml")
 
-        nav2_bringup_launch = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(nav2_bringup, "launch", "navigation_launch.py")
-            ),
-            launch_arguments={
-                "params_file": public_param_file,
-                "use_sim_time": "True",
-            }.items(),
-        )
+    nav2_bringup_launch = include_scoped_launch_py_description(
+        pkg_name="nav2_bringup",
+        paths=["launch", "navigation_launch.py"],
+        launch_arguments={
+            "params_file": public_param_file,
+            "use_sim_time": "True"
+        }
+    )
 
-        slam_bringup_launch = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(nav2_bringup, "launch", "slam_launch.py")
-            ),
-            launch_arguments={
-                "params_file": public_param_file,
-                "use_sim_time": "True",
-            }.items(),
-            condition=IfCondition(LaunchConfiguration("slam")),
-        )
+    slam_bringup_launch = include_scoped_launch_py_description(
+        pkg_name="nav2_bringup",
+        paths=["launch", "slam_launch.py"],
+        launch_arguments={
+            "params_file": public_param_file,
+            "use_sim_time": "True"
+        },
+        condition=IfCondition(LaunchConfiguration("slam")),
 
-        loc_bringup_launch = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(nav2_bringup, "launch", "localization_launch.py")
-            ),
-            launch_arguments={
-                "params_file": public_param_file,
-                "map": os.path.join(
-                    pal_maps,
-                    "maps",
-                    world_name,
-                    "map.yaml",
-                ),
-                "use_sim_time": "True",
-            }.items(),
-            condition=UnlessCondition(LaunchConfiguration("slam")),
-        )
+    )
 
-        rviz_bringup_launch = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(nav2_bringup, "launch", "rviz_launch.py")
-            ),
-            launch_arguments={
-                "rviz_config": os.path.join(
-                    tiago_dual_2dnav, "config", "rviz", "navigation.rviz"
-                ),
-            }.items(),
-            condition=IfCondition(is_public_sim),
-        )
+    loc_bringup_launch = include_scoped_launch_py_description(
+        pkg_name="nav2_bringup",
+        paths=["launch", "localization_launch.py"],
+        launch_arguments={
+            "params_file": public_param_file,
+            "map": map_path,
+            "use_sim_time": "True"
+        },
+        condition=UnlessCondition(LaunchConfiguration("slam")),
+    )
 
-        actions.append(nav2_bringup_launch)
-        actions.append(loc_bringup_launch)
-        actions.append(slam_bringup_launch)
-        actions.append(rviz_bringup_launch)
-    else:
-        remappings_file = os.path.join(
-            tiago_dual_2dnav, "params", "tiago_dual_"+base_type+"_remappings_sim.yaml")
+    rviz_bringup_launch = include_scoped_launch_py_description(
+        pkg_name="nav2_bringup",
+        paths=["launch", "rviz_launch.py"],
+        launch_arguments={
+            "rviz": rviz_config_file
+        },
+    )
 
-        pal_nav2_bringup = get_package_share_directory("pal_nav2_bringup")
-        laser_bringup_launch = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(
-                    pal_nav2_bringup,
-                    "launch",
-                    "nav_bringup.launch.py",
-                )
-            ),
-            launch_arguments={
-                "params_pkg": "tiago_dual_laser_sensors",
-                "params_file": base_type + "_laser_pipeline_sim.yaml",
-                "robot_name": "tiago",
-                "remappings_file": remappings_file,
-            }.items(),
-        )
+    actions.append(nav2_bringup_launch)
+    actions.append(loc_bringup_launch)
+    actions.append(slam_bringup_launch)
+    actions.append(rviz_bringup_launch)
 
-        nav_bringup_launch = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(
-                    pal_nav2_bringup,
-                    "launch",
-                    "nav_bringup.launch.py",
-                )
-            ),
-            launch_arguments={
-                "params_pkg": "tiago_dual_2dnav",
-                "params_file": "tiago_dual_" + base_type + "_nav.yaml",
-                "robot_name": "tiago",
-                "remappings_file": remappings_file,
-            }.items(),
-        )
 
-        slam_bringup_launch = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(
-                    pal_nav2_bringup,
-                    "launch",
-                    "nav_bringup.launch.py",
-                )
-            ),
-            launch_arguments={
-                "params_pkg": "tiago_dual_2dnav",
-                "params_file": "tiago_dual_slam.yaml",
-                "robot_name": "tiago",
-                "remappings_file": remappings_file,
-            }.items(),
-            condition=IfCondition(LaunchConfiguration("slam")),
-        )
+def private_nav_function(context, *args, **kwargs):
+    actions = []
+    base_type = read_launch_argument("base_type", context)
+    tiago_dual_2dnav = get_package_share_directory("tiago_dual_2dnav")
 
-        loc_bringup_launch = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(
-                os.path.join(
-                    pal_nav2_bringup,
-                    "launch",
-                    "nav_bringup.launch.py",
-                )
-            ),
-            launch_arguments={
-                "params_pkg": "tiago_dual_2dnav",
-                "params_file": "tiago_dual_" + base_type + "_loc.yaml",
-                "robot_name": "tiago",
-                "remappings_file": remappings_file,
-            }.items(),
-            condition=UnlessCondition(LaunchConfiguration("slam")),
-        )
+    remappings_file = os.path.join(
+        tiago_dual_2dnav, "params", "tiago_dual_"+base_type+"_remappings_sim.yaml")
 
-        rviz_node = Node(
-            package="rviz2",
-            executable="rviz2",
-            arguments=["-d", os.path.join(
-                tiago_dual_2dnav,
-                "config",
-                "rviz",
-                "navigation.rviz",
-            )],
-            output="screen",
-        )
+    laser_bringup_launch = include_scoped_launch_py_description(
+        pkg_name="pal_nav2_bringup",
+        paths=["launch", "nav_bringup.launch.py"],
+        launch_arguments={
+            "params_pkg": "tiago_dual_laser_sensors",
+            "params_file": base_type + "_laser_pipeline_sim.yaml",
+            "robot_name": "tiago_dual",
+            "remappings_file": remappings_file,
+        }
+    )
 
-        actions.append(laser_bringup_launch)
-        actions.append(nav_bringup_launch)
-        actions.append(slam_bringup_launch)
-        actions.append(loc_bringup_launch)
-        actions.append(rviz_node)
+    nav_bringup_launch = include_scoped_launch_py_description(
+        pkg_name="pal_nav2_bringup",
+        paths=["launch", "nav_bringup.launch.py"],
+        launch_arguments={
+            "params_pkg": "tiago_dual_2dnav",
+            "params_file": "tiago_dual_" + base_type + "_nav.yaml",
+            "robot_name": "tiago_dual",
+            "remappings_file": remappings_file,
+        })
+
+    slam_bringup_launch = include_scoped_launch_py_description(
+        pkg_name="pal_nav2_bringup",
+        paths=["launch", "nav_bringup.launch.py"],
+        launch_arguments={
+            "params_pkg": "tiago_dual_2dnav",
+            "params_file": "tiago_dual_slam.yaml",
+            "robot_name": "tiago_dual",
+            "remappings_file": remappings_file,
+        },
+        condition=IfCondition(LaunchConfiguration("slam"))
+    )
+
+    loc_bringup_launch = include_scoped_launch_py_description(
+        pkg_name="pal_nav2_bringup",
+        paths=["launch", "nav_bringup.launch.py"],
+        launch_arguments={
+            "params_pkg": "tiago_dual_2dnav",
+            "params_file": "tiago_dual_" + base_type + "_loc.yaml",
+            "robot_name": "tiago_dual",
+            "remappings_file": remappings_file,
+        },
+        condition=UnlessCondition(LaunchConfiguration("slam"))
+    )
+
+    rviz_node = Node(
+        package="rviz2",
+        executable="rviz2",
+        arguments=["-d", os.path.join(
+            tiago_dual_2dnav,
+            "config",
+            "rviz",
+            "navigation.rviz",
+        )],
+        output="screen",
+    )
+
+    actions.append(laser_bringup_launch)
+    actions.append(nav_bringup_launch)
+    actions.append(slam_bringup_launch)
+    actions.append(loc_bringup_launch)
+    actions.append(rviz_node)
 
     return actions
 
 
-def generate_launch_description():
-    """Launch Navigation common application Robot + Simulation."""
-    declare_is_public_sim_arg = DeclareLaunchArgument(
-        "is_public_sim",
-        default_value="False",
-        description="Whether or not you are using a public simulation",
+def declare_actions(launch_description: LaunchDescription, launch_args: LaunchArguments):
+
+    launch_description.add_action(
+        OpaqueFunction(
+            function=public_nav_function,
+            condition=IfCondition(LaunchConfiguration("is_public_sim"))
+        )
     )
 
-    declare_slam_arg = DeclareLaunchArgument(
-        "slam",
-        default_value="False",
-        description="Whether or not you are using SLAM",
+    launch_description.add_action(
+        OpaqueFunction(
+            function=private_nav_function,
+            condition=UnlessCondition(LaunchConfiguration("is_public_sim"))
+        )
     )
-
-    declare_world_name_arg = DeclareLaunchArgument(
-        "world_name", default_value="",
-        description="Specify world name, we'll convert to full path"
-    )
-
-    declare_base_type_arg = DeclareLaunchArgument(
-        "base_type",
-        default_value="pmb2",
-        description="Type of base for the robot",
-    )
-
-    navigation_bringup_launch = OpaqueFunction(function=navigation_bringup)
-
-    # Create the launch description and populate
-    ld = LaunchDescription()
-    ld.add_action(declare_is_public_sim_arg)
-    ld.add_action(declare_slam_arg)
-    ld.add_action(declare_world_name_arg)
-    ld.add_action(declare_base_type_arg)
-    ld.add_action(navigation_bringup_launch)
-
-    return ld
