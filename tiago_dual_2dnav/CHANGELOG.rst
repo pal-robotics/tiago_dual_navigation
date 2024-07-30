@@ -2,6 +2,17 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'air/feat/unify_pkgs' into 'humble-devel'
+  Restructure launch file
+  See merge request robots/tiago_dual_navigation!26
+* Unify quotation marks
+  Unify quotation marks
+* fix robot name to tiago_dual
+* Restructure launch file
+* Contributors: Aina, antoniobrandi
+
 4.1.3 (2024-07-19)
 ------------------
 * Merge branch 'fix/aca/laser-frames' into 'humble-devel'
