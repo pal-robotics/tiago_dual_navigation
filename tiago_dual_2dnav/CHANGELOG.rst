@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'fix/aca/dep' into 'humble-devel'
+  fix dep
+  See merge request robots/tiago_dual_navigation!27
+* fix dep
+* Contributors: andreacapodacqua, thomaspeyrucain
+
 4.2.0 (2024-07-30)
 ------------------
 * Merge branch 'air/feat/unify_pkgs' into 'humble-devel'
