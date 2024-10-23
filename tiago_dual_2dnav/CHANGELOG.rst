@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.3.0 (2024-10-23)
+------------------
 * Merge branch 'feat/aca/omni-navigation-mppi' into 'humble-devel'
   Using MPPI
   See merge request robots/tiago_dual_navigation!28
