@@ -2,6 +2,9 @@
 Changelog for package tiago_dual_laser_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.2.1 (2024-09-23)
 ------------------
 
