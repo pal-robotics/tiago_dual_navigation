@@ -24,7 +24,7 @@ from launch.actions import (
 from launch_pal.robot_arguments import CommonArgs
 from launch_pal.arg_utils import LaunchArgumentsBase
 from dataclasses import dataclass
-from tiago_description.launch_arguments import TiagoArgs
+from tiago_dual_description.launch_arguments import TiagoDualArgs
 from launch_pal.include_utils import include_scoped_launch_py_description
 from launch_pal.arg_utils import read_launch_argument
 from launch.conditions import IfCondition, UnlessCondition
@@ -37,7 +37,7 @@ class LaunchArguments(LaunchArgumentsBase):
 
     is_public_sim: DeclareLaunchArgument = CommonArgs.is_public_sim
     world_name: DeclareLaunchArgument = CommonArgs.world_name
-    base_type: DeclareLaunchArgument = TiagoArgs.base_type
+    base_type: DeclareLaunchArgument = TiagoDualArgs.base_type
     slam: DeclareLaunchArgument = CommonArgs.slam
     advanced_navigation: DeclareLaunchArgument = CommonArgs.advanced_navigation
 
