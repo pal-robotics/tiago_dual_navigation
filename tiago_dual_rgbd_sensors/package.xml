@@ -1,14 +1,13 @@
 <?xml version="1.0"?>
 <package format="3">
-  <name>tiago_dual_laser_sensors</name>
+  <name>tiago_dual_rgbd_sensors</name>
   <version>4.4.0</version>
   <description>Launch files and scripts needed to bring up the ROS nodes of a TIAGo robot.</description>
   <maintainer email="jordan.palacios@pal-robotics.com">Jordan Palacios</maintainer>
   <license>Apache License 2.0</license>
-  <author email="jose.garcia@pal-robotics.com">Jose Carlos Garcia</author>
+  <author email="andrea.capodacqua@pal-robotics.com">Andrea Capodacqua</author>
 
-
-  <url type="website">https://github.com/pal-robotics/tiago_simulation</url>
+  <url type="website">https://github.com/pal-robotics/tiago_dual_navigation</url>
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
