@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_laser_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'aca/feat/nav-params' into 'humble-devel'
+  feat nav-params
+  See merge request robots/tiago_dual_navigation!32
+* using new architecture
+* Contributors: andreacapodacqua, antoniobrandi
+
 4.4.0 (2024-10-25)
 ------------------
 

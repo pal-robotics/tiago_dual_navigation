@@ -2,6 +2,17 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'aca/feat/nav-params' into 'humble-devel'
+  feat nav-params
+  See merge request robots/tiago_dual_navigation!32
+* using TiagoDualArgs
+* linters
+* using new architecture
+* removed advanced_navigation rviz config
+* Contributors: andreacapodacqua, antoniobrandi
+
 4.4.0 (2024-10-25)
 ------------------
 * Merge branch 'fix/aca/mppi-omni' into 'humble-devel'

@@ -2,6 +2,14 @@
 Changelog for package tiago_dual_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge branch 'aca/feat/nav-params' into 'humble-devel'
+  feat nav-params
+  See merge request robots/tiago_dual_navigation!32
+* added rgbd_sensors pkg
+* Contributors: andreacapodacqua, antoniobrandi
+
 4.4.0 (2024-10-25)
 ------------------
 
