@@ -2,6 +2,9 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.5.0 (2024-11-14)
 ------------------
 * Merge branch 'aca/feat/nav-params' into 'humble-devel'
