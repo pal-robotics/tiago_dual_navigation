@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.5.1 (2024-11-21)
+------------------
 * Merge branch 'abr/fix/rviz' into 'humble-devel'
   start rviz with use_sim_time
   See merge request robots/tiago_dual_navigation!35
