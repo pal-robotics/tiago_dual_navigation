@@ -2,6 +2,9 @@
 Changelog for package tiago_dual_navigation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.5.1 (2024-11-21)
 ------------------
 
