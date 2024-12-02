@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.6.0 (2024-12-02)
+------------------
 * Merge branch 'abr/feat/deps-and-specs' into 'humble-devel'
   nav deps and specs
   See merge request robots/tiago_dual_navigation!36
