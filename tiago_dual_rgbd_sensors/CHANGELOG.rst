@@ -2,6 +2,9 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.7.0 (2025-01-24)
 ------------------
 * uniform rgbd launch

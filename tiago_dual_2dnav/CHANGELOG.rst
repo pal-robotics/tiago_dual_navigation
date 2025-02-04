@@ -2,6 +2,11 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Update tiago_dual_nav_bringup.launch.py
+* Contributors: antoniobrandi
+
 4.7.0 (2025-01-24)
 ------------------
 
