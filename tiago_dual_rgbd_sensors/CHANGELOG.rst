@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.9.0 (2025-04-03)
+------------------
 * Adopt pal configuration
 * Contributors: antoniobrandi
 
