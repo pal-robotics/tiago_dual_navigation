@@ -2,6 +2,11 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Adopt pal configuration
+* Contributors: antoniobrandi
+
 4.8.0 (2025-02-04)
 ------------------
 * Update tiago_dual_nav_bringup.launch.py

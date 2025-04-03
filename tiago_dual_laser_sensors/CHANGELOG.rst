@@ -2,6 +2,11 @@
 Changelog for package tiago_dual_laser_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Adopt pal configuration
+* Contributors: antoniobrandi
+
 4.8.0 (2025-02-04)
 ------------------
 
