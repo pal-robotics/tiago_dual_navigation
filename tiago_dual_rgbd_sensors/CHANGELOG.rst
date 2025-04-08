@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.10.0 (2025-04-08)
+-------------------
 * fix astra frames
 * Contributors: antoniobrandi
 
