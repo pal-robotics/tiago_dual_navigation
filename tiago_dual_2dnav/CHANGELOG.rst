@@ -2,6 +2,9 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.9.0 (2025-04-03)
 ------------------
 * Adopt pal configuration

@@ -2,6 +2,11 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix astra frames
+* Contributors: antoniobrandi
+
 4.9.0 (2025-04-03)
 ------------------
 * Adopt pal configuration
