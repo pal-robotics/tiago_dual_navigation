@@ -2,6 +2,11 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Point Cloud filter pipeline
+* Contributors: antoniobrandi
+
 4.10.0 (2025-04-08)
 -------------------
 * fix astra frames
