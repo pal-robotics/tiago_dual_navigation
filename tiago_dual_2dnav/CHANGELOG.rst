@@ -2,6 +2,9 @@
 Changelog for package tiago_dual_2dnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 4.12.0 (2026-07-07)
 -------------------
 * adapt eulero refactor
