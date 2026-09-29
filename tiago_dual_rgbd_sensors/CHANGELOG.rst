@@ -2,8 +2,8 @@
 Changelog for package tiago_dual_rgbd_sensors
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+4.13.0 (2026-09-29)
+-------------------
 * Use intra process communication
 * Contributors: antoniobrandi
 
